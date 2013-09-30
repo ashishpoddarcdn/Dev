@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SocialNetworkingAppModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="SocialNetworkingAppModelStoreContainer">
+    <EntitySet Name="TblApplicationInfo" EntityType="SocialNetworkingAppModel.Store.TblApplicationInfo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblOAuthDetails" EntityType="SocialNetworkingAppModel.Store.TblOAuthDetails" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TblUserInfo" EntityType="SocialNetworkingAppModel.Store.TblUserInfo" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="TblApplicationInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ApplicationName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApplicationDetails" Type="nvarchar" MaxLength="150" />
+    <Property Name="ContactUsDetails" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="TblOAuthDetails">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FacebookAppId" Type="nvarchar" MaxLength="100" />
+    <Property Name="FacebookKey" Type="nvarchar" MaxLength="100" />
+    <Property Name="TwitterAppId" Type="nvarchar" MaxLength="100" />
+    <Property Name="TwitterKey" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TblUserInfo">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneNumber" Type="numeric" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+</Schema>

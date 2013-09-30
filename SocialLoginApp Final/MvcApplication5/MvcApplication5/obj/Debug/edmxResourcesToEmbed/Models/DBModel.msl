@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SocialNetworkingAppModelStoreContainer" CdmEntityContainer="SocialNetworkingAppEntities">
+    <EntitySetMapping Name="TblApplicationInfoes">
+      <EntityTypeMapping TypeName="SocialNetworkingAppModel.TblApplicationInfo">
+        <MappingFragment StoreEntitySet="TblApplicationInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+          <ScalarProperty Name="ApplicationDetails" ColumnName="ApplicationDetails" />
+          <ScalarProperty Name="ContactUsDetails" ColumnName="ContactUsDetails" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblOAuthDetails">
+      <EntityTypeMapping TypeName="SocialNetworkingAppModel.TblOAuthDetail">
+        <MappingFragment StoreEntitySet="TblOAuthDetails">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FacebookAppId" ColumnName="FacebookAppId" />
+          <ScalarProperty Name="FacebookKey" ColumnName="FacebookKey" />
+          <ScalarProperty Name="TwitterAppId" ColumnName="TwitterAppId" />
+          <ScalarProperty Name="TwitterKey" ColumnName="TwitterKey" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblUserInfoes">
+      <EntityTypeMapping TypeName="SocialNetworkingAppModel.TblUserInfo">
+        <MappingFragment StoreEntitySet="TblUserInfo">
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
